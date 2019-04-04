@@ -12,7 +12,7 @@ h3 {
   font-family: Coda;
   font-size:36px;
 }
-p {
+h4, h5, h6, p {
   font-family: Coda;
 }
 .digits {
