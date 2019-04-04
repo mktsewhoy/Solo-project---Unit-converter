@@ -1,3 +1,8 @@
+button {
+  font-family: Coda;
+  font-size: 12px;
+  
+}
 h1 {
   font-family: Coda;
   font-size:60px;
@@ -17,7 +22,9 @@ h4 {
 h5, h6, p {
   font-family: Coda;
 }
-.digits {
+#digits {
   font-family: vt323;
   font-size:24px;
+  background-color: #000000;
+  color: #80ff80;
 }
