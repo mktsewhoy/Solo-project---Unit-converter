@@ -12,8 +12,10 @@ h3 {
   font-family: Coda;
   font-size:36px;
 }
-
+p {
+  font-family: Coda;
+}
 .digits {
   font-family: vt323;
-  font-size:60px;
+  font-size:24px;
 }
