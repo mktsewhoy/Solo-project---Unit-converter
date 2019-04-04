@@ -1,6 +1,10 @@
 body {
   background-color: #000000;
   font-family: Coda;
+  text-align: center;
+}
+html {
+  width: 100%;
 }
 
 button {
@@ -16,6 +20,7 @@ button {
   margin-bottom: 8px;
   padding: 12px 24px 12px 24px;
 }
+
 h1 {
   font-family: Coda;
   font-size:60px;
@@ -38,12 +43,24 @@ h5, h6, p {
   font-family: Coda;
 }
 
-.converter {
+input {
+  background-color: #000000;
+  border: 0px;
+  color: #80ff80;
+  font-family: vt323;
+  font-size:44px;
+  width: 100%;
+  margin-top: 0px;
+  text-align: right;
+}
+
+#converter {
   background-color: #d0d0a0;
   border: 6px;
   border-color: #808080;
   border-radius: 16px;
   border-style: solid;
+  margin: 0 auto;
   width: 640px;
 }
 
@@ -56,6 +73,6 @@ h5, h6, p {
   font-family: vt323;
   font-size:44px;
   max-width: 75%;
-  margin-top: 0px;
+  margin: 0 auto;
   text-align: right;
 }

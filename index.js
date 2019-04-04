@@ -6,6 +6,9 @@ const fahrenheit = 1.8;
 const gallons = 4.54609;
 const cubicinches = 16.387;
 
-function convertToMetric () {
-  
+function convertToImperial (n) {
+//     var from = document.getElementById("from").innerHTML;
+//     var to = document.getElementById("to").innerHTML;
+//   to = from * miles;
+document.getElementById("to").innerHTML = n * miles;
 }
