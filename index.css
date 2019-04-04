@@ -1,7 +1,20 @@
-button {
+body {
+  background-color: #000000;
   font-family: Coda;
-  font-size: 12px;
-  
+}
+
+button {
+  background-color: #c0c0c0;
+  border: 2px;
+  border-color: #000000;
+  border-radius: 4px;
+  border-style: ridge;
+  color: #000000;
+  font-family: Coda;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  padding: 12px 24px 12px 24px;
 }
 h1 {
   font-family: Coda;
@@ -14,17 +27,35 @@ h2 {
 h3 {
   font-family: Coda;
   font-size:36px;
+  margin-bottom: 0px;
 }
 h4 {
   font-family: Coda;
   font-size:30px;
+  margin-bottom: 0px;
 }
 h5, h6, p {
   font-family: Coda;
 }
+
+.converter {
+  background-color: #d0d0a0;
+  border: 6px;
+  border-color: #808080;
+  border-radius: 16px;
+  border-style: solid;
+  width: 640px;
+}
+
 .digits {
-  font-family: vt323;
-  font-size:24px;
   background-color: #000000;
+  border: 4px;
+  border-color:steelblue;
+  border-style: ridge;
   color: #80ff80;
+  font-family: vt323;
+  font-size:44px;
+  max-width: 75%;
+  margin-top: 0px;
+  text-align: right;
 }
