@@ -14,17 +14,19 @@
       <h3>Convert from</h3>
       <!-- source number -->
       <div class=digits>
-          <input type=number name=from value='0' id="from" onInput="convertToImperial(this.value)" onChange="convertToImperial(this.value)">
+        <input type=number placeholder=from value=0 id="fromUnit" onInput="convertTo(this.id,this.value)" onChange="convertTo(this.id,this.value)">
       </div>
+      <h5>miles</h5>
       <!-- source units -->
       <h4>to</h4>
       <!-- target number -->
-      <div id=to class=digits>
-        0
+      <div class=digits>
+        <input type=number placeholder=to value=0 id="toUnit" onInput="convertTo(this.id,this.value)" onChange="convertTo(this.id,this.value)">
       </div>
       <!-- target units -->
-      <div height=128>
-        <h1></h1>
+      <div>
+        <h5>km</h5>
+        <h5></h5>
       </div>
     </div>
 

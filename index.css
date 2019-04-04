@@ -23,23 +23,30 @@ button {
 
 h1 {
   font-family: Coda;
-  font-size:60px;
+  font-size: 60px;
 }
 h2 {
   font-family: Coda;
-  font-size:48px;
+  font-size: 48px;
 }
 h3 {
   font-family: Coda;
-  font-size:36px;
+  font-size: 36px;
   margin-bottom: 0px;
 }
 h4 {
   font-family: Coda;
-  font-size:30px;
+  font-size: 30px;
   margin-bottom: 0px;
 }
-h5, h6, p {
+h5 {
+  font-family: Coda;
+  font-size: 24px;
+  margin-bottom: 0px;
+  margin-top: 8px;
+}
+
+h6, p {
   font-family: Coda;
 }
 
