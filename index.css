@@ -61,14 +61,37 @@ input {
   text-align: right;
 }
 
+select {
+  background-color: black;
+  border: 4px;
+  border-color: grey;
+  border-style: groove;
+  color: white;
+  font-family: Coda;
+  font-size: 30px;
+  margin: 0 auto;
+  }
+
+select:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
 #converter {
-  background-image: "images/brushed-metal-texture-background.jpg";
+  background-color: #c0c0c0;
+  background-image: url("images/brushed-metal-texture-background.jpg");
   border: 6px;
-  border-color: #808080;
+  border-color: #404040;
   border-radius: 16px;
   border-style: solid;
   margin: 0 auto;
-  width: 640px;
+  width: 768px;
 }
 
 .digits {
@@ -79,7 +102,7 @@ input {
   color: #80ff80;
   font-family: vt323;
   font-size:44px;
-  max-width: 75%;
+  max-width: 65%;
   margin: 0 auto;
   text-align: right;
 }
