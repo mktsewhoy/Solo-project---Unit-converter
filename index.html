@@ -1,47 +1,54 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Unit Converter</title>
-    <meta charset="UTF-8">
-    <link href="index.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline|Coda|Gugi|Press+Start+2P|Raleway+Dots|VT323" rel="stylesheet">
-    <script src="index.js"></script>
-  </head>
-  
-  <body>
-    <div id="converter">
-      <h1>Unit Converter</h1>
-      <h3>Convert from</h3>
-      <!-- source number -->
-      <div align=top>
-        <input class=digits type=number placeholder=from value=0 id="fromUnit" onInput="convertTo(this.id,this.value)" onChange="convertTo(this.id,this.value)">
-        &nbsp;
-        <select name=imperialLength>
-          <option value=miles>miles</option>
-          <option value=yards>yards</option>
-          <option value=feet>feet</option>
-          <option value=inches>inches</option>
-        </select>
-      </div>
-      <!-- source units -->
-      <h4>to</h4>
-      <!-- target number -->
-      <div>
-        <input class=digits type=number placeholder=to value=0 id="toUnit" onInput="convertTo(this.id,this.value)" onChange="convertTo(this.id,this.value)">
-        &nbsp;
-        <select name=metricLength>
-          <option value=km>km</option>
-          <option value=metres>m</option>
-          <option value=cm>cm</option>
-          <option value=mm>mm</option>
-        </select>
-      </div>
-      <!-- target units -->
-      <div>
-        <h5>&nbsp;</h5>
-        <h5>&nbsp;</h5>
-      </div>
-    </div>
 
-  </body>
+<head>
+  <title>Unit Converter</title>
+  <meta charset="UTF-8">
+  <link href="index.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline|Coda|Gugi|Press+Start+2P|Raleway+Dots|VT323" rel="stylesheet">
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <div id="converter">
+    <h1>Unit Converter</h1>
+    <!--
+    <p>
+      <input class="radio">Length/Distance
+      <input class="radio">Weight/Mass
+      <input class="radio">Temperature
+      <input class="radio">Volume
+    </p> -->
+    <h3>Imperial</h3>
+    <!-- source number -->
+    <div align=top>
+      <input class=digits type=number placeholder=from value=0 id="fromUnit" onInput="convertTo(this.id,this.value)" onChange="convertTo(this.id,this.value)">      &nbsp;
+      <select name="imperial" id="imperial" onChange="convertTo(toUnit.id,toUnit.value)">
+        <option value=miles>miles</option>
+        <option value=yards>yards</option>
+        <option value=feet>feet</option>
+        <option value=inches>inches</option>
+      </select>
+    </div>
+    <!-- source units -->
+    <h3>Metric</h3>
+    <!-- target number -->
+    <div>
+      <input class=digits type=number placeholder=to value=0 id="toUnit" onInput="convertTo(this.id,this.value)" onChange="convertTo(this.id,this.value)">      &nbsp;
+      <select name="metric" id="metric" onChange="convertTo(fromUnit.id,fromUnit.value)">
+        <option value=km>km</option>
+        <option value=m>m</option>
+        <option value=cm>cm</option>
+        <option value=mm>mm</option>
+      </select>
+    </div>
+    <!-- target units -->
+    <div>
+      <h5>&nbsp;</h5>
+      <h5>&nbsp;</h5>
+    </div>
+  </div>
+
+</body>
+
 </html>
