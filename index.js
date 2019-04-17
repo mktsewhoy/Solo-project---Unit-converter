@@ -5,13 +5,14 @@ const miles = 1.60934;
 const inches = 2.54;
 // Weight & mass
 const pounds = 2.205;
-const tons = 2204.6;
+const ounces = 16;
+const stone = 14;
 // Temperature
-const fahrenheitMult = 1.8;
 const fahrenheitDiff = 32;
+const fahrenheitMult = 1.8;
 // Volume
-const gallons = 4.54609;
 const cubicinches = 16.387;
+const gallons = 4.54609;
 
 function convertTo(source, n) {
     n = parseFloat(n);
@@ -24,7 +25,7 @@ function convertTo(source, n) {
 
     //Convert distance/length when imperial value typed in.
     if (source == "fromUnit") {
-        // Convert imperial to km.
+        // Convert imperial length to km.
         if (impMenu == "miles" && metMenu == "km") {
             out.value = (n * miles).toFixed(3);
         }
@@ -37,7 +38,7 @@ function convertTo(source, n) {
         if (impMenu == "inches" && metMenu == "km") {
             out.value = ((n * inches) / 100000).toFixed(6);
         }
-        //Convert imperial to m.
+        //Convert imperial length to m.
         if (impMenu == "miles" && metMenu == "m") {
             out.value = (n * miles * 1000).toFixed(1);
         }
@@ -50,7 +51,7 @@ function convertTo(source, n) {
         if (impMenu == "inches" && metMenu == "m") {
             out.value = ((n * inches) / 100).toFixed(4);
         }
-        //Convert imperial to cm.
+        //Convert imperial length to cm.
         if (impMenu == "miles" && metMenu == "cm") {
             out.value = (n * miles * 100000).toFixed(0);
         }
@@ -63,7 +64,7 @@ function convertTo(source, n) {
         if (impMenu == "inches" && metMenu == "cm") {
             out.value = (n * inches).toFixed(2);
         }
-        //Convert imperial to mm.
+        //Convert imperial length to mm.
         if (impMenu == "miles" && metMenu == "mm") {
             out.value = (n * miles * 1000000).toFixed(0);
         }
@@ -76,8 +77,42 @@ function convertTo(source, n) {
         if (impMenu == "inches" && metMenu == "mm") {
             out.value = (n * inches * 10).toFixed(0);
         }
+        //Convert Fahrenheit to Celsius.
+        if (impMenu == "fahrenheit") {
+            metMenu = "celsius";
+            out.value = ((n - fahrenheitDiff)/fahrenheitMult).toFixed(1);
+        }
+        //Convert imperial mass to kg/tonnes.
+        if (impMenu == "ounces" && metMenu == "grams") {
+            out.value = ((n / pounds / ounces) * 1000).toFixed(0);
+        }
+        if (impMenu == "ounces" && metMenu == "kg") {
+            out.value = ((n / pounds / ounces) * 1000).toFixed(0);
+        }
+        if (impMenu == "ounces" && metMenu == "tonnes") {
+            out.value = ((n / pounds / ounces) * 1000).toFixed(0);
+        }
+        if (impMenu == "pounds" && metMenu == "grams") {
+            out.value = ((n / pounds) * 1000).toFixed(0);
+        }
+        if (impMenu == "pounds" && metMenu == "kg") {
+            out.value = (n / pounds).toFixed(3);
+        }
+        if (impMenu == "pounds" && metMenu == "tonnes") {
+            out.value = (n / pounds / 1000).toFixed(6);
+        }
+        if (impMenu == "stone" && metMenu == "grams") {
+            out.value = ((n / pounds) * stone * 1000).toFixed(0);
+        }
+        if (impMenu == "stone" && metMenu == "kg") {
+            out.value = ((n / pounds) * stone).toFixed(3);
+        }
+        if (impMenu == "stone" && metMenu == "tonnes") {
+            out.value = ((n / pounds) * stone / 1000).toFixed(6);
+        }
+        console.log(impMenu, metMenu)
     }
-    //Convert distance/length when metric value typed in.
+    //Convert length when metric value typed in.
     if (source == "toUnit") {
         //Convert km to imperial.
         if (impMenu == "miles" && metMenu == "km") {
@@ -131,5 +166,21 @@ function convertTo(source, n) {
         if (impMenu == "inches" && metMenu == "mm") {
             inp.value = (n / inches /10).toFixed(3);
         }
+        //Convert Celsius to Fahrenheit
+        if (metMenu == "celsius") {
+            impMenu = "fahrenheit";
+            inp.value = (fahrenheitDiff + (n * fahrenheitMult)).toFixed(1);
+        }
+        //Convert pounds/tons to kg/tonnes.
+        if (impMenu == "pounds" && metMenu == "grams") {
+            inp.value = ((n * pounds) / 1000).toFixed(6);
+        }
+        if (impMenu == "pounds" && metMenu == "kg") {
+            inp.value = (n * pounds).toFixed(3);
+        }
+        if (impMenu == "pounds" && metMenu == "tonnes") {
+            inp.value = ((n * pounds) / 1000000).toFixed(3);
+        }
+        console.log(impMenu, metMenu)
     }
 }

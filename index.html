@@ -24,10 +24,21 @@
     <div align=top>
       <input class=digits type=number placeholder=from value=0 id="fromUnit" onInput="convertTo(this.id,this.value)" onChange="convertTo(this.id,this.value)">      &nbsp;
       <select name="imperial" id="imperial" onChange="convertTo(toUnit.id,toUnit.value)">
-        <option value=miles>miles</option>
-        <option value=yards>yards</option>
-        <option value=feet>feet</option>
-        <option value=inches>inches</option>
+        <optgroup label=Length>
+          <option value=miles>miles</option>
+          <option value=yards>yards</option>
+          <option value=feet>feet</option>
+          <option value=inches>inches</option>
+        </optgroup>
+        <optgroup label=Mass>
+          <option value=ounces>oz</option>
+          <option value=pounds>lbs</option>
+          <option value=stone>st</option>
+          <option value=tons>US tons</option>
+        </optgroup>
+        <optgroup label=Temp>
+          <option value=fahrenheit>&deg;F</option>
+        </optgroup>
       </select>
     </div>
     <!-- source units -->
@@ -36,10 +47,20 @@
     <div>
       <input class=digits type=number placeholder=to value=0 id="toUnit" onInput="convertTo(this.id,this.value)" onChange="convertTo(this.id,this.value)">      &nbsp;
       <select name="metric" id="metric" onChange="convertTo(fromUnit.id,fromUnit.value)">
-        <option value=km>km</option>
-        <option value=m>m</option>
-        <option value=cm>cm</option>
-        <option value=mm>mm</option>
+        <optgroup label=Length>
+          <option value=km>km</option>
+          <option value=m>m</option>
+          <option value=cm>cm</option>
+          <option value=mm>mm</option>
+        </optgroup>
+        <optgroup label=Mass>
+          <option value=grams>g</option>        
+          <option value=kg>kg</option>
+          <option value=tonnes>t</option>
+        </optgroup>
+        <optgroup label=Temp>
+            <option value=celsius>&deg;C</option>
+          </optgroup>
       </select>
     </div>
     <!-- target units -->

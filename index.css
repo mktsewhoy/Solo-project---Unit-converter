@@ -68,12 +68,12 @@ input {
 
 select {
   background-color: black;
-  border: 5px;
+  border: 11px;
   border-color: grey;
   border-style: groove;
   color: white;
   font-family: Coda;
-  font-size: 32px;
+  font-size: 22px;
   margin: 0px auto;
   width: 128px;
   }
@@ -96,7 +96,7 @@ select:after {
   border-color: #404040;
   border-radius: 16px;
   border-style: solid;
-  margin: 0 auto;
+  margin: 0px auto;
   width: 768px;
 }
 
@@ -109,6 +109,6 @@ select:after {
   font-family: vt323;
   font-size:44px;
   max-width: 65%;
-  margin: 0px auto;
+  margin: 16px 0px 0px 0px;
   text-align: right;
 }
