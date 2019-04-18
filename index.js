@@ -94,7 +94,7 @@ function convertTo(source, n) {
         }
         //Convert pounds to metric.
         if (impMenu == "pounds" && metMenu == "grams") {
-            out.value = ((n / pounds) * 1000).toFixed(0);
+            out.value = ((n / pounds) * 1000).toFixed(1);
         }
         if (impMenu == "pounds" && metMenu == "kg") {
             out.value = (n / pounds).toFixed(3);
@@ -114,10 +114,10 @@ function convertTo(source, n) {
         }
         //Convert US tons to metric.
         if (impMenu == "tons" && metMenu == "grams") {
-            out.value = ((n / pounds) * 2000000).toFixed(0);
+            out.value = ((n / pounds) * 2000000).toFixed(6);
         }
         if (impMenu == "tons" && metMenu == "kg") {
-            out.value = ((n / pounds) *  2000).toFixed(3);
+            out.value = ((n / pounds) *  2000).toFixed(6);
         }
         if (impMenu == "tons" && metMenu == "tonnes") {
             out.value = ((n / pounds) * 2).toFixed(6);
@@ -230,10 +230,10 @@ function convertTo(source, n) {
         }
         //Convert to US tons from metric.
         if (impMenu == "tons" && metMenu == "grams") {
-            inp.value = ((n * pounds) * 2000000).toFixed(0);
+            inp.value = ((n * pounds) / 2000000).toFixed(6);
         }
         if (impMenu == "tons" && metMenu == "kg") {
-            inp.value = ((n * pounds) *  2000).toFixed(3);
+            inp.value = ((n * pounds) /  2000).toFixed(6);
         }
         if (impMenu == "tons" && metMenu == "tonnes") {
             inp.value = ((n * pounds) / 2).toFixed(6);
