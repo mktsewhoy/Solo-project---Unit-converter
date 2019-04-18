@@ -23,7 +23,7 @@ function convertTo(source, n) {
     let metUnits = document.getElementById("metric");
     let metMenu = metUnits.options[metUnits.selectedIndex].value;
 
-    //Convert distance/length when imperial value typed in.
+    //Convert when imperial value typed in.
     if (source == "fromUnit") {
         // Convert imperial length to km.
         if (impMenu == "miles" && metMenu == "km") {
@@ -136,9 +136,8 @@ function convertTo(source, n) {
         if (impMenu == "gallons" && metMenu == "litres") {
             out.value = (n * gallon).toFixed(6);
         }
-        console.log(impMenu, metMenu)
     }
-    //Convert length when metric value typed in.
+    //Convert when metric value typed in.
     if (source == "toUnit") {
         //Convert km to imperial.
         if (impMenu == "miles" && metMenu == "km") {
@@ -253,6 +252,5 @@ function convertTo(source, n) {
         if (impMenu == "gallons" && metMenu == "litres") {
             inp.value = (n / gallon).toFixed(6);
         }
-        console.log(impMenu, metMenu)
     }
 }
