@@ -4,15 +4,15 @@ const yards = 0.9144;
 const miles = 1.60934;
 const inches = 2.54;
 // Weight & mass
-const pounds = 2.205;
+const pounds = 2.204623;
 const ounces = 16;
 const stone = 14;
 // Temperature
 const fahrenheitDiff = 32;
 const fahrenheitMult = 1.8;
 // Volume
-const cubicinches = 16.387;
-const gallons = 4.54609;
+const cubicinch = 16.3871;
+const gallon = 3.78541;
 
 function convertTo(source, n) {
     n = parseFloat(n);
@@ -78,20 +78,21 @@ function convertTo(source, n) {
             out.value = (n * inches * 10).toFixed(0);
         }
         //Convert Fahrenheit to Celsius.
-        if (impMenu == "fahrenheit") {
+        if (impMenu == "fahrenheit" && metMenu=="celsius") {
             metMenu = "celsius";
             out.value = ((n - fahrenheitDiff)/fahrenheitMult).toFixed(1);
         }
-        //Convert imperial mass to kg/tonnes.
+        //Convert ounces to metric.
         if (impMenu == "ounces" && metMenu == "grams") {
-            out.value = ((n / pounds / ounces) * 1000).toFixed(0);
+            out.value = ((n / pounds / ounces) * 1000).toFixed(3);
         }
         if (impMenu == "ounces" && metMenu == "kg") {
-            out.value = ((n / pounds / ounces) * 1000).toFixed(0);
+            out.value = ((n / pounds / ounces)).toFixed(6);
         }
         if (impMenu == "ounces" && metMenu == "tonnes") {
-            out.value = ((n / pounds / ounces) * 1000).toFixed(0);
+            out.value = ((n / pounds / ounces) / 1000).toFixed(6);
         }
+        //Convert pounds to metric.
         if (impMenu == "pounds" && metMenu == "grams") {
             out.value = ((n / pounds) * 1000).toFixed(0);
         }
@@ -101,6 +102,7 @@ function convertTo(source, n) {
         if (impMenu == "pounds" && metMenu == "tonnes") {
             out.value = (n / pounds / 1000).toFixed(6);
         }
+        //Convert stone to metric.
         if (impMenu == "stone" && metMenu == "grams") {
             out.value = ((n / pounds) * stone * 1000).toFixed(0);
         }
@@ -108,7 +110,31 @@ function convertTo(source, n) {
             out.value = ((n / pounds) * stone).toFixed(3);
         }
         if (impMenu == "stone" && metMenu == "tonnes") {
-            out.value = ((n / pounds) * stone / 1000).toFixed(6);
+            out.value = ((n / pounds /1000) * stone).toFixed(6);
+        }
+        //Convert US tons to metric.
+        if (impMenu == "tons" && metMenu == "grams") {
+            out.value = ((n / pounds) * 2000000).toFixed(0);
+        }
+        if (impMenu == "tons" && metMenu == "kg") {
+            out.value = ((n / pounds) *  2000).toFixed(3);
+        }
+        if (impMenu == "tons" && metMenu == "tonnes") {
+            out.value = ((n / pounds) * 2).toFixed(6);
+        }
+        //Convert cubic inches to metric.
+        if (impMenu == "cubicinches" && metMenu == "ml") {
+            out.value = (n * cubicinch).toFixed(3);
+        }
+        if (impMenu == "cubicinches" && metMenu == "litres") {
+            out.value = ((n * cubicinch) / 1000).toFixed(6);
+        }
+        //Convert gallons to metric.
+        if (impMenu == "gallons" && metMenu == "ml") {
+            out.value = (n * gallon * 1000).toFixed(3);
+        }
+        if (impMenu == "gallons" && metMenu == "litres") {
+            out.value = (n * gallon).toFixed(6);
         }
         console.log(impMenu, metMenu)
     }
@@ -166,12 +192,24 @@ function convertTo(source, n) {
         if (impMenu == "inches" && metMenu == "mm") {
             inp.value = (n / inches /10).toFixed(3);
         }
+
         //Convert Celsius to Fahrenheit
-        if (metMenu == "celsius") {
+        if (impMenu =="fahrenheit" && metMenu == "celsius") {
             impMenu = "fahrenheit";
             inp.value = (fahrenheitDiff + (n * fahrenheitMult)).toFixed(1);
         }
-        //Convert pounds/tons to kg/tonnes.
+
+        //Convert to ounces from metric.
+        if (impMenu == "ounces" && metMenu == "grams") {
+            inp.value = ((n * pounds * ounces) /1000).toFixed(6);
+        }
+        if (impMenu == "ounces" && metMenu == "kg") {
+            inp.value = (n * pounds * ounces).toFixed(1);
+        }
+        if (impMenu == "ounces" && metMenu == "tonnes") {
+            inp.value = ((n * pounds * ounces) * 1000).toFixed(0);
+        }
+        //Convert to pounds from metric.
         if (impMenu == "pounds" && metMenu == "grams") {
             inp.value = ((n * pounds) / 1000).toFixed(6);
         }
@@ -179,7 +217,41 @@ function convertTo(source, n) {
             inp.value = (n * pounds).toFixed(3);
         }
         if (impMenu == "pounds" && metMenu == "tonnes") {
-            inp.value = ((n * pounds) / 1000000).toFixed(3);
+            inp.value = ((n * pounds) * 1000).toFixed(3);
+        }
+        //Convert to stone from metric.
+        if (impMenu == "stone" && metMenu == "grams") {
+            inp.value = ((n * pounds) /1000 / stone).toFixed(6);
+        }
+        if (impMenu == "stone" && metMenu == "kg") {
+            inp.value = ((n * pounds) / stone).toFixed(3);
+        }
+        if (impMenu == "stone" && metMenu == "tonnes") {
+            inp.value = ((n * pounds *1000) /stone).toFixed(6);
+        }
+        //Convert to US tons from metric.
+        if (impMenu == "tons" && metMenu == "grams") {
+            inp.value = ((n * pounds) * 2000000).toFixed(0);
+        }
+        if (impMenu == "tons" && metMenu == "kg") {
+            inp.value = ((n * pounds) *  2000).toFixed(3);
+        }
+        if (impMenu == "tons" && metMenu == "tonnes") {
+            inp.value = ((n * pounds) / 2).toFixed(6);
+        }
+        //Convert to cubic inches from metric.
+        if (impMenu == "cubicinches" && metMenu == "ml") {
+            inp.value = (n / cubicinch).toFixed(6);
+        }
+        if (impMenu == "cubicinches" && metMenu == "litres") {
+            inp.value = ((n / cubicinch) * 1000).toFixed(3);
+        }
+        //Convert to gallons from metric.
+        if (impMenu == "gallons" && metMenu == "ml") {
+            inp.value = (n / gallon / 1000).toFixed(3);
+        }
+        if (impMenu == "gallons" && metMenu == "litres") {
+            inp.value = (n / gallon).toFixed(6);
         }
         console.log(impMenu, metMenu)
     }
