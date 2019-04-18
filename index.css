@@ -6,21 +6,6 @@ body {
 html {
   width: 100%;
 }
-
-button {
-  background-color: #c0c0c0;
-  border: 2px;
-  border-color: #000000;
-  border-radius: 4px;
-  border-style: ridge;
-  color: #000000;
-  font-family: Coda;
-  font-size: 16px;
-  margin-top: 16px;
-  margin-bottom: 8px;
-  padding: 12px 24px 12px 24px;
-}
-
 h1 {
   font-family: Gugi, Sans-serif;
   font-size: 60px;
@@ -70,8 +55,9 @@ select {
   background-color: black;
   border: 11px;
   border-color: grey;
-  border-style: groove;
+  border-style: inset;
   color: white;
+
   font-family: Coda;
   font-size: 22px;
   margin: 0px auto;
@@ -79,6 +65,7 @@ select {
   }
 
 select:after {
+
   position: absolute;
   content: "";
   top: 14px;
