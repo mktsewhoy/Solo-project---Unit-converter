@@ -15,7 +15,7 @@
     
     <!-- source number -->
     <div align=top class=vertical>
-      <h3>Imperial
+      <h3>Imperial &nbsp;
       <input class=digits type=number placeholder=from value=0 id="fromUnit" onInput="convertTo(this.id,this.value)" onChange="convertTo(this.id,this.value)">&nbsp;
       <select name="imperial" id="imperial" onChange="convertTo(toUnit.id,toUnit.value)">
         <optgroup label=Length>
@@ -44,7 +44,7 @@
     <!-- source units -->
     <!-- target number -->
     <div class=vertical>
-      <h3>Metric
+      <h3>Metric &nbsp;
       <input class=digits type=number placeholder=to value=0 id="toUnit" onInput="convertTo(this.id,this.value)" onChange="convertTo(this.id,this.value)">&nbsp;
       <select name="metric" id="metric" onChange="convertTo(fromUnit.id,fromUnit.value)">
         <optgroup label=Length>
