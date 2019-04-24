@@ -52,6 +52,10 @@ input {
   margin: 2px;
 }
 
+.vertical {
+  vertical-align: top;New 
+}
+
 select {
   background-color: black;
   border: 11px;
