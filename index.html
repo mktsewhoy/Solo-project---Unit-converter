@@ -15,7 +15,7 @@
     <h3>Imperial</h3>
     <!-- source number -->
     <div align=top class=vertical>
-      <input class=digits type=number placeholder=from value=0 id="fromUnit" onInput="convertTo(this.id,this.value)" onChange="convertTo(this.id,this.value)">      
+      <input class=digits type=number placeholder=from value=0 id="fromUnit" onInput="convertTo(this.id,this.value)" onChange="convertTo(this.id,this.value)">&nbsp;
       <select name="imperial" id="imperial" onChange="convertTo(toUnit.id,toUnit.value)">
         <optgroup label=Length>
           <option value=miles>miles</option>
@@ -43,7 +43,7 @@
     <h3>Metric</h3>
     <!-- target number -->
     <div class=vertical>
-      <input class=digits type=number placeholder=to value=0 id="toUnit" onInput="convertTo(this.id,this.value)" onChange="convertTo(this.id,this.value)">      &nbsp;
+      <input class=digits type=number placeholder=to value=0 id="toUnit" onInput="convertTo(this.id,this.value)" onChange="convertTo(this.id,this.value)">&nbsp;
       <select name="metric" id="metric" onChange="convertTo(fromUnit.id,fromUnit.value)">
         <optgroup label=Length>
           <option value=km>km</option>
