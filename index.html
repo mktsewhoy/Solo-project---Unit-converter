@@ -42,9 +42,9 @@
     </div>
     
     <!-- source units -->
-    <h3>Metric</h3>
     <!-- target number -->
     <div class=vertical>
+      <h3>Metric
       <input class=digits type=number placeholder=to value=0 id="toUnit" onInput="convertTo(this.id,this.value)" onChange="convertTo(this.id,this.value)">&nbsp;
       <select name="metric" id="metric" onChange="convertTo(fromUnit.id,fromUnit.value)">
         <optgroup label=Length>
@@ -66,6 +66,7 @@
           <option value=litres>L</option>
         </optgroup>
       </select>
+      </h3>
     </div>
     <!-- target units -->
     <div>
