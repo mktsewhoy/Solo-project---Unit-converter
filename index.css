@@ -62,7 +62,6 @@ select {
   border-color: grey;
   border-style: inset;
   color: white;
-
   font-family: Coda;
   font-size: 22px;
   margin: 0px auto;
@@ -70,7 +69,6 @@ select {
   }
 
 select:after {
-
   position: absolute;
   content: "";
   top: 14px;
@@ -84,11 +82,11 @@ select:after {
 #converter {
   background-color: #c0c0c0;
   background-image: url("images/brushed-metal-texture-background.jpg");
-  border: 6px;
+  border: 8px;
   border-color: #404040;
   border-radius: 16px;
   border-style: solid;
-  margin: 4px auto;
+  margin: 12px auto;
   width: 800px;
   height: 96%;
 }
