@@ -88,7 +88,7 @@ select:after {
   border-color: #404040;
   border-radius: 16px;
   border-style: solid;
-  margin: 0px auto;
+  margin: 4px auto;
   width: 800px;
   height: 96%;
 }
