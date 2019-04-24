@@ -18,7 +18,7 @@ h3 {
   font-family: Coda;
   font-size: 36px;
   margin-bottom: 0px;
-  margin-top:12px;
+  margin-top: 12px;
 }
 h4 {
   font-family: Coda;
@@ -43,7 +43,7 @@ input {
   font-family: vt323;
   font-size:44px;
   width: 100%;
-  margin-top: 4px;
+  margin-top: 0px auto;
   text-align: right;
 }
 
