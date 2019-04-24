@@ -42,7 +42,7 @@ input {
   color: #80ff80;
   font-family: vt323;
   font-size:44px;
-  width: 384px;
+  max-length: 16;
   margin-top: 0px auto;
   text-align: right;
 }
