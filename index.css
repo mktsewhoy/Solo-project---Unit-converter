@@ -85,7 +85,8 @@ select:after {
   border-radius: 16px;
   border-style: solid;
   margin: 0px auto;
-  width: 768px;
+  width: 800px;
+  height: 640px;
 }
 
 .digits {
