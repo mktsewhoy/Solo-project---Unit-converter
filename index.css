@@ -98,6 +98,6 @@ select:after {
   font-family: vt323;
   font-size:44px;
   max-width: 65%;
-  margin: 16px 0px 0px 0px;
+  margin: 16px 0px 16px 0px;
   text-align: right;
 }
