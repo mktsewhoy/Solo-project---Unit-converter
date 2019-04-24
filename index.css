@@ -71,7 +71,7 @@ select:after {
   content: "";
   top: 14px;
   right: 10px;
-  width: 200;
+  width: 200px;
   height: 0;
   border: 6px solid transparent;
   border-color: #fff transparent transparent transparent;
