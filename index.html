@@ -12,9 +12,10 @@
 <body>
   <div id="converter">
     <h1>Automatic Unit<br>Converter</h1>
-    <h3>Imperial
+    
     <!-- source number -->
     <div align=top class=vertical>
+      <h3>Imperial
       <input class=digits type=number placeholder=from value=0 id="fromUnit" onInput="convertTo(this.id,this.value)" onChange="convertTo(this.id,this.value)">&nbsp;
       <select name="imperial" id="imperial" onChange="convertTo(toUnit.id,toUnit.value)">
         <optgroup label=Length>
@@ -37,8 +38,9 @@
           <option value=gallons>US gal</option>
         </optgroup>
       </select>
+      </h3>
     </div>
-    </h3>
+    
     <!-- source units -->
     <h3>Metric</h3>
     <!-- target number -->
