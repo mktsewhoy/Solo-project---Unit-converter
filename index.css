@@ -42,15 +42,16 @@ input {
   color: #80ff80;
   font-family: vt323;
   font-size:44px;
-  max-length: 16;
+  length: 20;
   margin-top: 0px auto;
   text-align: right;
+  vertical-align: middle;
 }
 
-.radio {
+/* .radio {
   display: inline;
   margin: 2px;
-}
+} */
 
 .vertical {
   vertical-align: middle;
@@ -58,17 +59,20 @@ input {
 
 select {
   background-color: black;
-  border: 11px;
+  border: 10px;
   border-color: grey;
   border-style: inset;
   color: white;
+  display: inline-block;
   font-family: Coda;
-  font-size: 22px;
+  font-size: 20px;
   margin: 0px auto;
+  padding: 3px;
+  vertical-align: middle;
   width: 128px;
   }
 
-select:after {
+/* select:after {
   position: absolute;
   content: "";
   top: 14px;
@@ -77,7 +81,7 @@ select:after {
   height: 0;
   border: 6px solid transparent;
   border-color: #fff transparent transparent transparent;
-}
+} */
 
 #converter {
   background-color: #c0c0c0;
